@@ -15,10 +15,9 @@ h1 {
 }
 
 h5 {
- 
+ color: black;
   size: 12pt;
   text-align: right;
-  
   margin-right: 20px
 }
 #userGuess{
