@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:700" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Are You Psychic?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:700" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Are You Psychic?</title>
 </head>
+
 <body>
 
-<h1>Are You Psychic?</h1>
+  <h1>Are You Psychic?</h1>
 
-<p>I'm thinking of a certain letter (a-z) right now. Can you guess what it is?<br>
-Guess by simply pressing the key of the letter you want to guess. You have ten tries to get it.<br>
-BTW: use lower case letters only.</p>
+  <p>I'm thinking of a certain letter (a-z) right now. Can you guess what it is?<br>
+    Guess by simply pressing the key of the letter you want to guess. You have ten tries to get it.<br>
+    BTW: use lower case letters only.</p>
 
 
 
-<h3>Good Luck!</h3>
+  <h3>Good Luck!</h3>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="userGuess" placeholder="Type your guess here!" aria-label="Guess" aria-describedby="go">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="go">Guess</button>
+    </div>
+  </div>
 
   <div id="game">
-     <h2>Press any key to begin!</h2>
-      </div>
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="assets/javascript/game.js"></script>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>

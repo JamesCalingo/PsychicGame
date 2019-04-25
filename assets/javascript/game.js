@@ -1,11 +1,9 @@
 // Create the pool of letters for the computer to use
-var computerChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var computerChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",]
 
-// Create Initial score values
 var wins = 0;
 var losses = 0;
 
-// Guess limiter
 var guesses = 10;
 
 // Array to store previously guessed letters
@@ -16,7 +14,7 @@ var gameHTML = document.getElementById("game")
 
 // Have computer select letter
 var random = [Math.floor(Math.random() * computerChoice.length)];
-  var selection = computerChoice[random]
+var selection = computerChoice[random]
 
 function newRound () {
   guesses = 10;
@@ -27,14 +25,15 @@ function newRound () {
 }
 
 // Create input method
-document.onkeyup = function(event) {
+$("#go").on("click", function(event) {
+  event.preventDefault();
 
   // Determines which key was pressed.
-  var userGuess = event.key;
+  var userGuess = $("#userGuess").val().toLowerCase().trim();
 
 
   if(!computerChoice.includes(userGuess)){
-  alert("That's not a letter! Well, either that or it's upper case when it shouldn't be...");
+  alert("What the heck is THAT? Whatever it is, it's certainly not right...");
   return false
   }
 // check the guess - if it was right:
@@ -49,9 +48,9 @@ selection = computerChoice[random];
 }
 // If guess was wrong:
 else {
-  alert("Nope! That's not it!");
   guesses--;
   usedLetters.push(userGuess);
+  $("#userGuess").val(null)
 }
 // End round and reset if guess limit reached
 if(guesses === 0) {
@@ -72,4 +71,4 @@ Wins: ${wins}<br>
 Losses: ${losses}
 `
 }
-
+)
