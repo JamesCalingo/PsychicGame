@@ -8,18 +8,20 @@ body{
 h1 {
   text-align: center;
   font-weight: bold;
-  font-family: 'Oswald', sans-serif;
-
 }
 
-.hint {
-  color: grey
+  #pagetitle{
+  font-family: 'Oswald', sans-serif;
 }
 
 h5 {
-  color:black;
+ 
   size: 12pt;
   text-align: right;
-  font-family: fantasy;
+  
   margin-right: 20px
+}
+#userGuess{
+  background: black;
+  color: white
 }
