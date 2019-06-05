@@ -36,7 +36,12 @@ document.onkeyup = function (event) {
   }
 
   if (userGuess === selection) {
-    alert("You Got It! The thing is, though...are you actually psychic, or did you just get lucky (or worse, CHEAT)? Let's find out by...DOING IT AGAIN!");
+    Swal.fire({
+      title: 'You got it!',
+      text: 'But are you really psychic, or did you just get lucky (or worse, CHEAT)?',
+      type: 'success',
+      confirmButtonText: "Only one way to find out...try again!"
+    })
     wins++;
     newGame()
   } else {
@@ -46,7 +51,12 @@ document.onkeyup = function (event) {
   }
 
   if (guesses === 0) {
-    alert("Game over! The correct answer was " + display + ". Sadly, it seems like you are NOT psychic...but I'll give you another chance anyway. Just don't expect me to be TOO nice though.");
+    Swal.fire({
+      title: 'Game over!',
+      text: `The correct answer was ${display}. Sadly, it seems that you are NOT psychic.`,
+      type: 'error',
+      confirmButtonText: 'Maybe another try will help?'
+    })
     losses++;
     newGame();
   }
