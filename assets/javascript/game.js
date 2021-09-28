@@ -160,4 +160,6 @@ Losses: ${losses}`;
 //     );
 //     location.reload();
 //   }
-};
+}
+
+
